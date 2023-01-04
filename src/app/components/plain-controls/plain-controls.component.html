@@ -1,17 +1,19 @@
 <form [formGroup]="plainForm" (ngSubmit)="showSubmitObject()">
     <label>A text control</label><br>
-    <input formControlName="text" selectablePlain><br>
+    <input formControlName="text" selectablePlain><br><hr>
     <label>A number control</label><br>
-    <input formControlName="number" type="number"><br>
+    <input formControlName="number" type="number" selectablePlain><br><hr>
     <label>A radio control</label><br>
     <div>
-        <input formControlName="radio" type="radio" value="true" id="yes"><label for="yes">Yes</label>
-        <input formControlName="radio" type="radio" value="false" id="no"><label for="no">No</label>
-    </div><br>
+        <label for="yes">Yes</label>
+        <input formControlName="radio" type="radio" value="yes" id="yes">
+        <label for="no">No</label>
+        <input formControlName="radio" type="radio" value="no" id="no" selectablePlain>
+    </div><hr>
     <label>A range control</label><br>
-    <input formControlName="range" type="range"><br>
+    <input formControlName="range" type="range" selectablePlain><br><hr>
     <label>A single selection control</label><br>
-    <select formControlName="singleSel">
+    <select formControlName="singleSel" selectablePlain>
         <option value="">--Please choose an option--</option>
         <option value="dog">Dog</option>
         <option value="cat">Cat</option>
@@ -19,9 +21,9 @@
         <option value="parrot">Parrot</option>
         <option value="spider">Spider</option>
         <option value="goldfish">Goldfish</option>
-    </select><br>
+    </select><br><hr>
     <label>A multiple selection control</label><br>
-    <select formControlName="multiSel" multiple>
+    <select formControlName="multiSel" multiple selectablePlain>
         <option value="">--Please choose multiple options--</option>
         <option value="dog">Dog</option>
         <option value="cat">Cat</option>
@@ -29,6 +31,7 @@
         <option value="parrot">Parrot</option>
         <option value="spider">Spider</option>
         <option value="goldfish">Goldfish</option>
-    </select><br>
+    </select><br><hr>
+    <br>
     <button>Submit</button>
 </form>
