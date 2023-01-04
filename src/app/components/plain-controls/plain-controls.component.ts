@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { SelectablePlainDirective } from 'src/app/directives/selectable-directive-plain.directive';
 
 @Component({
   selector: 'app-plain-controls',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, SelectablePlainDirective],
   templateUrl: './plain-controls.component.html',
   styleUrls: ['./plain-controls.component.scss']
 })
