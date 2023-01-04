@@ -15,7 +15,7 @@ export class PlainControlsComponent {
   plainForm = new FormGroup({
     text: new FormControl(''),
     number: new FormControl(0),
-    radio: new FormControl(false),
+    radio: new FormControl('no'),
     range: new FormControl(0),
     singleSel: new FormControl(''),
     multiSel: new FormControl([]),
