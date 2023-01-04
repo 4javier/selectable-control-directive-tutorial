@@ -1,0 +1,34 @@
+<form [formGroup]="plainForm" (ngSubmit)="showSubmitObject()">
+    <label>A text control</label><br>
+    <input formControlName="text"><br>
+    <label>A number control</label><br>
+    <input formControlName="number" type="number"><br>
+    <label>A radio control</label><br>
+    <div>
+        <input formControlName="radio" type="radio" value="true" id="yes"><label for="yes">Yes</label>
+        <input formControlName="radio" type="radio" value="false" id="no"><label for="no">No</label>
+    </div><br>
+    <label>A range control</label><br>
+    <input formControlName="range" type="range"><br>
+    <label>A single selection control</label><br>
+    <select formControlName="singleSel">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+    </select><br>
+    <label>A multiple selection control</label><br>
+    <select formControlName="multiSel" multiple>
+        <option value="">--Please choose multiple options--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+    </select><br>
+    <button>Submit</button>
+</form>
