@@ -5,11 +5,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
+import { SelectableDirectiveMaterialDirective } from 'src/app/directives/selectable-directive-material.directive';
 
 @Component({
   selector: 'app-material-controls',
   standalone: true,
-  imports: [ReactiveFormsModule,
+  imports: [ReactiveFormsModule, SelectableDirectiveMaterialDirective,
             MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule],
   templateUrl: './material-controls.component.html',
   styleUrls: ['./material-controls.component.scss']
