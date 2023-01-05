@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
-import { AbstractControl, NgControl, ReactiveFormsModule } from '@angular/forms';
+import { NgControl } from '@angular/forms';
 
 @Directive({
   selector: '[selectablePlain]',
@@ -13,6 +13,7 @@ export class SelectablePlainDirective {
     private ctrl: NgControl) {}
 
   ngAfterViewInit() {
+    
     const checkBox = this.renderer.createElement('input') as HTMLInputElement;
     this.renderer.setAttribute(checkBox, 'type', 'checkbox');
     
