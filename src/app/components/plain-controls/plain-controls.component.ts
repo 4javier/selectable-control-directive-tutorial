@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SelectablePlainDirective } from 'src/app/directives/selectable-directive-plain.directive';
-
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field'; 
 @Component({
   selector: 'app-plain-controls',
   standalone: true,
