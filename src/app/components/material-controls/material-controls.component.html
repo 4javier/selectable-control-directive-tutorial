@@ -1,0 +1,44 @@
+<div class="container" [formGroup]="plainForm">
+    <mat-form-field>
+        <mat-label>A text control</mat-label>
+        <input matInput formControlName="text">
+    </mat-form-field>
+    <mat-form-field>
+        <label>A number control</label>
+        <input matInput formControlName="number" type="number">
+    </mat-form-field>
+    <label>A radio control</label>
+    <mat-radio-group formControlName="radio">
+        <mat-radio-button  value="yes">Yes</mat-radio-button>
+        <mat-radio-button  value="no">No</mat-radio-button>
+    </mat-radio-group>
+    <label>A range control</label><br>
+    <mat-slider>
+        <input matSliderThumb formControlName="range">
+    </mat-slider>
+    <mat-form-field>
+        <mat-label>A single selection control</mat-label>
+        <mat-select formControlName="singleSel">
+            <mat-option value="">--Please choose an option--</mat-option>
+            <mat-option value="dog">Dog</mat-option>
+            <mat-option value="cat">Cat</mat-option>
+            <mat-option value="hamster">Hamster</mat-option>
+            <mat-option value="parrot">Parrot</mat-option>
+            <mat-option value="spider">Spider</mat-option>
+            <mat-option value="goldfish">Goldfish</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>A multiple selection control</mat-label>
+        <mat-select formControlName="multiSel" multiple>
+            <mat-option value="">--Please choose multiple options--</mat-option>
+            <mat-option value="dog">Dog</mat-option>
+            <mat-option value="cat">Cat</mat-option>
+            <mat-option value="hamster">Hamster</mat-option>
+            <mat-option value="parrot">Parrot</mat-option>
+            <mat-option value="spider">Spider</mat-option>
+            <mat-option value="goldfish">Goldfish</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button (click)="showSubmitObject()">Submit</button>
+</div>
