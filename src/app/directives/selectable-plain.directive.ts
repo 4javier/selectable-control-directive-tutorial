@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { tap } from 'rxjs';
+import { startWith, tap } from 'rxjs';
 
 @Directive({
   selector: '[selectablePlain]',
@@ -32,12 +32,9 @@ export class SelectablePlainDirective {
   }
 
   ngOnInit() {
-  
-    if (this.ctrl.control?.enabled) 
-      this.renderer.setProperty(this.checkBox, 'checked', true);
-  
 
     this.ctrl.statusChanges?.pipe(
+      startWith(this.ctrl.control?.status),
       tap((status: string) => status === "DISABLED" 
             ? this.renderer.setProperty(this.checkBox, 'checked', false)
             : this.renderer.setProperty(this.checkBox, 'checked', true)
