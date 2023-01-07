@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SelectablePlainDirective } from 'src/app/directives/selectable-directive-plain.directive';
-import { MatFormFieldModule, MatLabel } from '@angular/material/form-field'; 
+import { SelectablePlainDirective } from 'src/app/directives/selectable-plain.directive';
 @Component({
   selector: 'app-plain-controls',
   standalone: true,
@@ -22,6 +21,7 @@ export class PlainControlsComponent {
   });
 
   constructor() { }
+
   showSubmitObject() {
     window.alert("Object submitted:\n\n"+JSON.stringify(this.plainForm.value, null, 2))
   }

@@ -1,4 +1,4 @@
-import { SelectablePlainDirective } from './selectable-directive-plain.directive';
+import { SelectablePlainDirective } from './selectable-plain.directive';
 
 describe('SelectableDirectivePlainDirective', () => {
   it('should create an instance', () => {
