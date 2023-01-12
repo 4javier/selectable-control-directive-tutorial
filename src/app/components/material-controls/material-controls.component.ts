@@ -6,10 +6,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
+import { SelectableMaterialDirective } from 'src/app/directives/selectable-material.directive';
 
 @Component({
   selector: 'app-material-controls',
   standalone: true,
+  imports: [ReactiveFormsModule, SelectableMaterialDirective,
+            MatFormFieldModule, MatInputModule, MatRadioModule,
             MatSelectModule, MatSliderModule, MatButtonModule],
   templateUrl: './material-controls.component.html',
   styleUrls: ['./material-controls.component.scss']
