@@ -4,7 +4,7 @@
         <input matInput formControlName="text" >
     </mat-form-field>
     <mat-form-field selectableMat>
-        <label>A number control</label>
+        <mat-label>A number control</mat-label>
         <input matInput formControlName="number" type="number" >
     </mat-form-field>
     <label>A radio control</label>
@@ -40,5 +40,4 @@
             <mat-option value="goldfish">Goldfish</mat-option>
         </mat-select>
     </mat-form-field>
-    <button (click)="showSubmitObject()">Submit</button>
-</div>
+    <button mat-raised-button color="primary" (click)="showSubmitObject()">Submit</button>
