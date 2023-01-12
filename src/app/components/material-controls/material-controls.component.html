@@ -1,7 +1,7 @@
 <div class="container" [formGroup]="plainForm">
     <mat-form-field selectableMat>
         <mat-label>A text control</mat-label>
-        <input matInput formControlName="text" >
+        <input matInput formControlName="text">
     </mat-form-field>
     <mat-form-field selectableMat>
         <mat-label>A number control</mat-label>
@@ -14,7 +14,7 @@
     </mat-radio-group>
     <label>A range control</label><br>
     <mat-slider selectableMat>
-        <input matSliderThumb formControlName="range" >
+        <input formControlName="range" matSliderThumb >
     </mat-slider>
     <mat-form-field selectableMat>
         <mat-label>A single selection control</mat-label>
@@ -41,3 +41,5 @@
         </mat-select>
     </mat-form-field>
     <button mat-raised-button color="primary" (click)="showSubmitObject()">Submit</button>
+    <button (click)="disableRange()">Disable</button>
+</div>

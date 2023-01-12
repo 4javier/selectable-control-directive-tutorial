@@ -20,7 +20,7 @@ export class MaterialControlsComponent {
     text: new FormControl(''),
     number: new FormControl(0),
     radio: new FormControl('no'),
-    range: new FormControl(0),
+    range: new FormControl({value: 0, disabled:true}),
     singleSel: new FormControl(''),
     multiSel: new FormControl([]),
   });
@@ -28,5 +28,9 @@ export class MaterialControlsComponent {
   constructor() { }
   showSubmitObject() {
     window.alert("Object submitted:\n\n"+JSON.stringify(this.plainForm.value, null, 2))
+  }
+
+  disableRange() {
+    this.plainForm.controls.range.disable();
   }
 }
