@@ -10,6 +10,7 @@ import { startWith, tap } from 'rxjs';
 export class SelectableMaterialDirective {
 
   @ContentChild(NgControl) ctrl!: NgControl;
+  _radioCtrl?: NgControl;
   disablingCheckbox: ComponentRef<MatCheckbox>;
   constructor(
       private vcr: ViewContainerRef,
@@ -17,8 +18,18 @@ export class SelectableMaterialDirective {
   ) {
     this.disablingCheckbox = this.vcr.createComponent(MatCheckbox)
     
+    if (this.el.nativeElement.nodeName === 'MAT-RADIO-GROUP') {
+      this._radioCtrl = inject(NgControl);
+    }
+
+  }
+  
   ngAfterContentInit() {
 
+    if (this.el.nativeElement.nodeName === 'MAT-RADIO-GROUP') {
+      this.ctrl = this._radioCtrl!;
+    }
+          
     this.disablingCheckbox.instance.change.subscribe(
       v => v.checked ? this.ctrl.control?.enable() : this.ctrl.control?.disable()
     );
