@@ -34,6 +34,7 @@ export class SelectableMaterialDirective {
       v => v.checked ? this.ctrl.control?.enable() : this.ctrl.control?.disable()
     );
 
+    setTimeout(() =>
       this.ctrl.control?.statusChanges?.pipe(
         startWith(this.ctrl.control?.disabled ? 'DISABLED' : ''),
         tap((status: string) => status === 'DISABLED' 
@@ -41,6 +42,7 @@ export class SelectableMaterialDirective {
               : this.disablingCheckbox.setInput('checked', true)
         )
       ).subscribe()
+    )
 
   }
 }
